@@ -76,7 +76,6 @@ public class cashSystem extends javax.swing.JFrame {
 //        Image pizImg5 = pizz5.getImage().getScaledInstance(85, 85, Image.SCALE_SMOOTH);
 //        FotoPizza5.setIcon(new ImageIcon(pizImg5));
         
-
         
 //        ImageIcon cocaCola = new ImageIcon(getClass().getResource("/Images/coca-cola-logo-png-22.png"));
 //        Image cocaImg = cocaCola.getImage().getScaledInstance(270, 130, Image.SCALE_SMOOTH);
@@ -194,11 +193,14 @@ public class cashSystem extends javax.swing.JFrame {
         jPanelSubtotalBebidas = new javax.swing.JPanel();
         jLabelSubTotalBebidas = new javax.swing.JLabel();
         jLabelTotalBebidas = new javax.swing.JLabel();
+        jLabelPagos = new javax.swing.JLabel();
+        btnFactura = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pipe's Burguesas");
 
         jPanelInformation.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Información", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 14), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanelInformation.setForeground(new java.awt.Color(255, 255, 255));
 
         txtNumeroOrden.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         txtNumeroOrden.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -222,7 +224,7 @@ public class cashSystem extends javax.swing.JFrame {
 
         jLabelImage.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabelImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/95248281_3549951621686773_2471870403174203392_n.jpg"))); // NOI18N
+        jLabelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Pipes.png"))); // NOI18N
         jLabelImage.setToolTipText("");
 
         javax.swing.GroupLayout jPanelInformationLayout = new javax.swing.GroupLayout(jPanelInformation);
@@ -247,8 +249,8 @@ public class cashSystem extends javax.swing.JFrame {
                     .addGroup(jPanelInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(txtNumeroOrden, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
                         .addComponent(txtNombreCliente)))
-                .addGap(17, 17, 17)
-                .addComponent(jLabelImage, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(7, 7, 7))
         );
         jPanelInformationLayout.setVerticalGroup(
@@ -291,6 +293,7 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
+        FotoBurger1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Burger1.png"))); // NOI18N
         FotoBurger1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 FotoBurger1MouseClicked(evt);
@@ -318,6 +321,8 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
+        FotoBurger2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Burger2.png"))); // NOI18N
+
         LabelNameBurger2.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelNameBurger2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelNameBurger2.setText("Bacon Burger");
@@ -338,6 +343,8 @@ public class cashSystem extends javax.swing.JFrame {
                 SpinnerBurger3StateChanged(evt);
             }
         });
+
+        FotoBurger3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Burger3.png"))); // NOI18N
 
         LabelNameBurger3.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelNameBurger3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -360,6 +367,8 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
+        FotoBurger4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Burger4.png"))); // NOI18N
+
         LabelNameBurger4.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelNameBurger4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelNameBurger4.setText("Grilled Chicken Rs.500");
@@ -367,7 +376,7 @@ public class cashSystem extends javax.swing.JFrame {
         LabelCantidadBurger4.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelCantidadBurger4.setText("CANT:");
 
-        jPanelSubtotalBurgers.setBackground(new java.awt.Color(204, 0, 204));
+        jPanelSubtotalBurgers.setBackground(new java.awt.Color(255, 51, 51));
 
         LabelSubTotalB1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         LabelSubTotalB1.setForeground(new java.awt.Color(255, 255, 255));
@@ -404,63 +413,60 @@ public class cashSystem extends javax.swing.JFrame {
         jPanelBurgersLayout.setHorizontalGroup(
             jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                .addGap(66, 66, 66)
                 .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelBurgersLayout.createSequentialGroup()
                                 .addComponent(CBBurger1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(FotoBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(FotoBurger1))
                             .addGroup(jPanelBurgersLayout.createSequentialGroup()
                                 .addComponent(LabelCantidadBurger1)
+                                .addGap(18, 18, 18)
+                                .addComponent(SpinnerBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                .addComponent(CBBurger2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SpinnerBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(LabelNameBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addComponent(CBBurger2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(FotoBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addComponent(LabelCantidadBurger2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SpinnerBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(LabelNameBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
+                                .addComponent(FotoBurger2))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                .addComponent(LabelCantidadBurger2)
+                                .addGap(18, 18, 18)
+                                .addComponent(SpinnerBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addComponent(CBBurger3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                                .addGap(66, 66, 66)
                                 .addComponent(LabelCantidadBurger3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(LabelNameBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64)
-                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addComponent(CBBurger4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(FotoBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addComponent(LabelCantidadBurger4)
+                                .addGap(39, 39, 39)
+                                .addComponent(CBBurger3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SpinnerBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
-                        .addComponent(LabelNameBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(16, 16, 16)))
-                .addGap(57, 57, 57))
+                                .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(CBBurger4)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(FotoBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(LabelCantidadBurger4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(SpinnerBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18))
+                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(LabelNameBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(LabelNameBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelNameBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(59, 59, 59)
+                        .addComponent(LabelNameBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(53, 53, 53))
             .addGroup(jPanelBurgersLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelSubtotalBurgers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -472,58 +478,57 @@ public class cashSystem extends javax.swing.JFrame {
         jPanelBurgersLayout.setVerticalGroup(
             jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FotoBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(CBBurger4)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LabelNameBurger4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(FotoBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                .addComponent(CBBurger3)
+                                .addGap(45, 45, 45))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                .addComponent(CBBurger2)
+                                .addGap(47, 47, 47)))
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(SpinnerBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelCantidadBurger4)))
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(CBBurger1))
-                            .addComponent(FotoBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LabelNameBurger2)
+                            .addComponent(LabelNameBurger1)
+                            .addComponent(LabelNameBurger3))
                         .addGap(18, 18, 18)
-                        .addComponent(LabelNameBurger1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(SpinnerBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelCantidadBurger1)))
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(CBBurger3)))
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelCantidadBurger3)))
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FotoBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(CBBurger2)))
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LabelCantidadBurger2)
                             .addComponent(SpinnerBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelCantidadBurger2)))
-                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LabelNameBurger3)
-                            .addComponent(LabelNameBurger2))))
-                .addGap(49, 49, 49)
+                            .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabelCantidadBurger3)
+                            .addComponent(LabelCantidadBurger4)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                            .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                                    .addComponent(FotoBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                    .addComponent(CBBurger4)
+                                    .addGap(43, 43, 43)))
+                            .addComponent(LabelNameBurger4)
+                            .addGap(18, 18, 18)
+                            .addComponent(SpinnerBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                            .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                                    .addGap(35, 35, 35)
+                                    .addComponent(CBBurger1)
+                                    .addGap(79, 79, 79))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                    .addComponent(FotoBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(46, 46, 46)))
+                            .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(SpinnerBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(LabelCantidadBurger1)))))
+                .addGap(43, 43, 43)
                 .addComponent(jPanelSubtotalBurgers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -674,7 +679,7 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
-        jPanelSubTotal.setBackground(new java.awt.Color(204, 0, 204));
+        jPanelSubTotal.setBackground(new java.awt.Color(255, 51, 51));
 
         jLabelSubtotal.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabelSubtotal.setForeground(new java.awt.Color(255, 255, 255));
@@ -715,7 +720,7 @@ public class cashSystem extends javax.swing.JFrame {
                 .addComponent(CBPizza1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(FotoPizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPizzasLayout.createSequentialGroup()
                         .addComponent(SlabelPizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -786,7 +791,7 @@ public class cashSystem extends javax.swing.JFrame {
                             .addComponent(SlabelPizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(Spinner1Pizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 23, Short.MAX_VALUE))
+                .addGap(0, 17, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPizzasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelSubTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -933,10 +938,11 @@ public class cashSystem extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelNota, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanelCambioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCambio, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelCantidadPagada, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCantidadPagada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelCambioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelCambioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabelCantidadPagada, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtCantidadPagada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCambio, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
         );
 
@@ -1114,7 +1120,7 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
-        jPanelSubtotalBebidas.setBackground(new java.awt.Color(204, 0, 204));
+        jPanelSubtotalBebidas.setBackground(new java.awt.Color(255, 51, 51));
 
         jLabelSubTotalBebidas.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabelSubTotalBebidas.setForeground(new java.awt.Color(255, 255, 255));
@@ -1233,10 +1239,15 @@ public class cashSystem extends javax.swing.JFrame {
                 .addGroup(jPanelBebidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CBTeFrioGrande)
                     .addComponent(SpinnerTeFrioGrande, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanelSubtotalBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(44, 44, 44)
+                .addComponent(jPanelSubtotalBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jLabelPagos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Pagos.png"))); // NOI18N
+
+        btnFactura.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        btnFactura.setText("Generar factura");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1248,23 +1259,37 @@ public class cashSystem extends javax.swing.JFrame {
                     .addComponent(jPanelPago, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanelInformation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 36, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(29, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanelInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanelBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jPanelInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
                 .addComponent(jPanelPago, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(32, 32, 32))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanelInformation.getAccessibleContext().setAccessibleName("Informacion de cliente");
@@ -2149,6 +2174,7 @@ public class cashSystem extends javax.swing.JFrame {
     private javax.swing.JSpinner SpinnerTeFrioGrande;
     private javax.swing.JSpinner SpinnerTeFrioRegular;
     private javax.swing.JButton btnCambio;
+    private javax.swing.JButton btnFactura;
     private javax.swing.JLabel jLabelCambio1;
     private javax.swing.JLabel jLabelCambio2;
     private javax.swing.JLabel jLabelCantidadPagada;
@@ -2159,6 +2185,7 @@ public class cashSystem extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNombreCliente;
     private javax.swing.JLabel jLabelNota;
     private javax.swing.JLabel jLabelNumeroOrden;
+    private javax.swing.JLabel jLabelPagos;
     private javax.swing.JLabel jLabelSubTotalBebidas;
     private javax.swing.JLabel jLabelSubtotal;
     private javax.swing.JLabel jLabelTotalBebidas;
