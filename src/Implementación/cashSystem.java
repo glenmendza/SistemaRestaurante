@@ -18,7 +18,7 @@ public class cashSystem extends javax.swing.JFrame {
     double totalPizza; // Total de Pizzas
     double totalDrinks; // Total de Bebidas
     double total; // Total (Hamburguesas, pizzas, bebidas)
-    double[] sumPizza = new double[30]; // Arreglo de Pizzas
+    double[] sumPizza = new double[12]; // Arreglo de Pizzas
     double[] sumDrinks = new double[8]; // Arreglo de Bebidas
     int pizzaQty1 = 0;
     // //Subtotal de Burgers
@@ -1559,7 +1559,7 @@ public class cashSystem extends javax.swing.JFrame {
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[0] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1573,12 +1573,12 @@ public class cashSystem extends javax.swing.JFrame {
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[1] = mPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[1] = mPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
