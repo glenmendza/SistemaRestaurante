@@ -53,34 +53,12 @@ public class cashSystem extends javax.swing.JFrame {
      */
     public cashSystem() {
         initComponents();
-        imageRescaling();
         mostrardia();
     }
     
     public void total(){
         total = totalBurger + totalPizza + totalDrinks;
         jLabelTotalPagar2.setText("₡"+String.valueOf(total));
-    }
-    
-    public void imageRescaling(){
-        
-        //imagenes de hamburguesas
-//        ImageIcon burger1 = new ImageIcon(getClass().getResource("/Images/hamburger.png"));
-//        Image img1 = burger1.getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
-//        FotoBurger1.setIcon(new ImageIcon(img1));
-        
-        
-//imagenes pitzas
-      
-//        ImageIcon pizz5 = new ImageIcon(getClass().getResource("/Images/pizza_PNG7151.png"));
-//        Image pizImg5 = pizz5.getImage().getScaledInstance(85, 85, Image.SCALE_SMOOTH);
-//        FotoPizza5.setIcon(new ImageIcon(pizImg5));
-        
-        
-//        ImageIcon cocaCola = new ImageIcon(getClass().getResource("/Images/coca-cola-logo-png-22.png"));
-//        Image cocaImg = cocaCola.getImage().getScaledInstance(270, 130, Image.SCALE_SMOOTH);
-//        jLabel21.setIcon(new ImageIcon(cocaImg));
-        
     }
 
     /**
@@ -163,6 +141,10 @@ public class cashSystem extends javax.swing.JFrame {
         jPanelSubTotal = new javax.swing.JPanel();
         jLabelSubtotal = new javax.swing.JLabel();
         totalPizzaLabel = new javax.swing.JLabel();
+        LabelNameBurger5 = new javax.swing.JLabel();
+        LabelNameBurger6 = new javax.swing.JLabel();
+        LabelNameBurger7 = new javax.swing.JLabel();
+        LabelNameBurger8 = new javax.swing.JLabel();
         jPanelPago = new javax.swing.JPanel();
         jLabelTotalPagar2 = new javax.swing.JLabel();
         jLabelTotalPagar1 = new javax.swing.JLabel();
@@ -302,7 +284,7 @@ public class cashSystem extends javax.swing.JFrame {
 
         LabelNameBurger1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelNameBurger1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelNameBurger1.setText("Grand Angus");
+        LabelNameBurger1.setText("Pipe's Burger 1");
 
         LabelCantidadBurger1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelCantidadBurger1.setText("CANT:");
@@ -325,7 +307,7 @@ public class cashSystem extends javax.swing.JFrame {
 
         LabelNameBurger2.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelNameBurger2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelNameBurger2.setText("Bacon Burger");
+        LabelNameBurger2.setText("Pipe's Burger 2");
 
         LabelCantidadBurger2.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelCantidadBurger2.setText("CANT:");
@@ -348,7 +330,7 @@ public class cashSystem extends javax.swing.JFrame {
 
         LabelNameBurger3.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelNameBurger3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelNameBurger3.setText("BBQ Veggie");
+        LabelNameBurger3.setText("Pipe's Burger 3");
 
         LabelCantidadBurger3.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelCantidadBurger3.setText("CANT:");
@@ -371,7 +353,7 @@ public class cashSystem extends javax.swing.JFrame {
 
         LabelNameBurger4.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelNameBurger4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelNameBurger4.setText("Grilled Chicken Rs.500");
+        LabelNameBurger4.setText("Pipe's Burger 4");
 
         LabelCantidadBurger4.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LabelCantidadBurger4.setText("CANT:");
@@ -425,7 +407,7 @@ public class cashSystem extends javax.swing.JFrame {
                                 .addComponent(LabelCantidadBurger1)
                                 .addGap(18, 18, 18)
                                 .addComponent(SpinnerBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
                                 .addComponent(CBBurger2)
@@ -434,39 +416,42 @@ public class cashSystem extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
                                 .addComponent(LabelCantidadBurger2)
                                 .addGap(18, 18, 18)
-                                .addComponent(SpinnerBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addGap(66, 66, 66)
-                                .addComponent(LabelCantidadBurger3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addComponent(CBBurger3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(CBBurger4)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FotoBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(LabelCantidadBurger4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(SpinnerBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18))
+                                .addComponent(SpinnerBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanelBurgersLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(LabelNameBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(LabelNameBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(LabelNameBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(59, 59, 59)
-                        .addComponent(LabelNameBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(53, 53, 53))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LabelNameBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(57, 57, 57)
+                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(LabelCantidadBurger3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4))
+                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                        .addComponent(CBBurger3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                                .addComponent(LabelNameBurger3)
+                                .addGap(10, 10, 10))
+                            .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addComponent(CBBurger4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FotoBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(LabelCantidadBurger4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(SpinnerBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(LabelNameBurger4)))
+                .addGap(65, 65, 65))
             .addGroup(jPanelBurgersLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelSubtotalBurgers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -478,56 +463,64 @@ public class cashSystem extends javax.swing.JFrame {
         jPanelBurgersLayout.setVerticalGroup(
             jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
                 .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                        .addContainerGap(47, Short.MAX_VALUE)
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
-                                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(FotoBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                        .addComponent(FotoBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                        .addComponent(CBBurger2)
+                                        .addGap(47, 47, 47)))
+                                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(LabelNameBurger2)
+                                    .addComponent(LabelNameBurger1))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(LabelCantidadBurger2)
+                                    .addComponent(SpinnerBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LabelCantidadBurger4)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                                    .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                                            .addComponent(FotoBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(LabelNameBurger4)
+                                            .addGap(18, 18, 18))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                            .addComponent(CBBurger4)
+                                            .addGap(77, 77, 77)))
+                                    .addComponent(SpinnerBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                                    .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                                            .addGap(35, 35, 35)
+                                            .addComponent(CBBurger1)
+                                            .addGap(79, 79, 79))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                            .addComponent(FotoBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(46, 46, 46)))
+                                    .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(SpinnerBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(LabelCantidadBurger1))))))
+                    .addGroup(jPanelBurgersLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
+                                .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
                                 .addComponent(CBBurger3)
-                                .addGap(45, 45, 45))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
-                                .addComponent(CBBurger2)
-                                .addGap(47, 47, 47)))
-                        .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LabelNameBurger2)
-                            .addComponent(LabelNameBurger1)
-                            .addComponent(LabelNameBurger3))
+                                .addGap(45, 45, 45)))
+                        .addComponent(LabelNameBurger3)
                         .addGap(18, 18, 18)
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LabelCantidadBurger2)
-                            .addComponent(SpinnerBurger2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelCantidadBurger3)
-                            .addComponent(LabelCantidadBurger4)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                            .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                    .addComponent(FotoBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
-                                    .addComponent(CBBurger4)
-                                    .addGap(43, 43, 43)))
-                            .addComponent(LabelNameBurger4)
-                            .addGap(18, 18, 18)
-                            .addComponent(SpinnerBurger4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                            .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                    .addGap(35, 35, 35)
-                                    .addComponent(CBBurger1)
-                                    .addGap(79, 79, 79))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBurgersLayout.createSequentialGroup()
-                                    .addComponent(FotoBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(46, 46, 46)))
-                            .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(SpinnerBurger1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LabelCantidadBurger1)))))
+                            .addComponent(LabelCantidadBurger3))))
                 .addGap(43, 43, 43)
                 .addComponent(jPanelSubtotalBurgers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -541,11 +534,13 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
-        SlabelPizza1.setText("S:");
+        FotoPizza1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Jamon.png"))); // NOI18N
+
+        SlabelPizza1.setText("P:");
 
         MlabelPizza1.setText("M:");
 
-        LlabelPizza1.setText("L:");
+        LlabelPizza1.setText("G:");
 
         Spinner1Pizza1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         Spinner1Pizza1.setEnabled(false);
@@ -577,7 +572,9 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
-        SlabelPizza2.setText("S:");
+        FotoPizza2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pizzaSuprema.png"))); // NOI18N
+
+        SlabelPizza2.setText("P:");
 
         Spinner1Pizza2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         Spinner1Pizza2.setEnabled(false);
@@ -597,7 +594,7 @@ public class cashSystem extends javax.swing.JFrame {
 
         MlabelPizza2.setText("M:");
 
-        LlabelPizza2.setText("L:");
+        LlabelPizza2.setText("G:");
 
         Spinner3Pizza2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         Spinner3Pizza2.setEnabled(false);
@@ -613,7 +610,9 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
-        SlabelPizza3.setText("S:");
+        FotoPizza3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hawaiana.png"))); // NOI18N
+
+        SlabelPizza3.setText("P:");
 
         Spinner1Pizza3.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         Spinner1Pizza3.setEnabled(false);
@@ -633,7 +632,7 @@ public class cashSystem extends javax.swing.JFrame {
 
         MlabelPizza3.setText("M:");
 
-        LlabelPizza3.setText("L:");
+        LlabelPizza3.setText("G:");
 
         Spinner3Pizza3.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         Spinner3Pizza3.setEnabled(false);
@@ -649,7 +648,9 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
-        SlabelPizza4.setText("S:");
+        FotoPizza4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/vegetariana.png"))); // NOI18N
+
+        SlabelPizza4.setText("P:");
 
         Spinner1Pizza4.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         Spinner1Pizza4.setEnabled(false);
@@ -669,7 +670,7 @@ public class cashSystem extends javax.swing.JFrame {
 
         MlabelPizza4.setText("M:");
 
-        LlabelPizza4.setText("L:");
+        LlabelPizza4.setText("G:");
 
         Spinner3Pizza4.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         Spinner3Pizza4.setEnabled(false);
@@ -711,97 +712,132 @@ public class cashSystem extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        LabelNameBurger5.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        LabelNameBurger5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelNameBurger5.setText("Jamón y queso");
+
+        LabelNameBurger6.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        LabelNameBurger6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelNameBurger6.setText("Suprema");
+
+        LabelNameBurger7.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        LabelNameBurger7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelNameBurger7.setText("Hawaiana");
+
+        LabelNameBurger8.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        LabelNameBurger8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelNameBurger8.setText("Vegetariana");
+
         javax.swing.GroupLayout jPanelPizzasLayout = new javax.swing.GroupLayout(jPanelPizzas);
         jPanelPizzas.setLayout(jPanelPizzasLayout);
         jPanelPizzasLayout.setHorizontalGroup(
             jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(CBPizza1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FotoPizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPizzasLayout.createSequentialGroup()
-                        .addComponent(SlabelPizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Spinner1Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPizzasLayout.createSequentialGroup()
-                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(MlabelPizza1)
-                            .addComponent(LlabelPizza1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Spinner3Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Spinner2Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(22, 22, 22)
-                .addComponent(CBPizza2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FotoPizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addComponent(MlabelPizza2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Spinner2Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                            .addComponent(LlabelPizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Spinner3Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                            .addComponent(SlabelPizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Spinner1Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CBPizza3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FotoPizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addComponent(MlabelPizza3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Spinner2Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                            .addComponent(LlabelPizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Spinner3Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                            .addComponent(SlabelPizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Spinner1Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CBPizza4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FotoPizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addComponent(MlabelPizza4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Spinner2Pizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                            .addComponent(LlabelPizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Spinner3Pizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                            .addComponent(SlabelPizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Spinner1Pizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 17, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPizzasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanelSubTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPizzasLayout.createSequentialGroup()
+                        .addComponent(jPanelSubTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                                .addComponent(CBPizza1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(FotoPizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPizzasLayout.createSequentialGroup()
+                                        .addComponent(SlabelPizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Spinner1Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPizzasLayout.createSequentialGroup()
+                                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MlabelPizza1)
+                                            .addComponent(LlabelPizza1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Spinner2Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Spinner3Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(12, 12, 12)
+                                .addComponent(CBPizza2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(FotoPizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPizzasLayout.createSequentialGroup()
+                                            .addComponent(MlabelPizza2)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(Spinner2Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPizzasLayout.createSequentialGroup()
+                                            .addComponent(SlabelPizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(Spinner1Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                                        .addComponent(LlabelPizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Spinner3Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CBPizza3))
+                            .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(LabelNameBurger5, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(108, 108, 108)
+                                .addComponent(LabelNameBurger6, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(LabelNameBurger7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(FotoPizza3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                                .addComponent(MlabelPizza3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Spinner2Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                                    .addComponent(LlabelPizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Spinner3Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                                    .addComponent(SlabelPizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Spinner1Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(CBPizza4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LabelNameBurger8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(FotoPizza4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                                .addComponent(MlabelPizza4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Spinner2Pizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                                    .addComponent(LlabelPizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Spinner3Pizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                                    .addComponent(SlabelPizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Spinner1Pizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(19, 19, 19))))
         );
         jPanelPizzasLayout.setVerticalGroup(
             jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(30, 30, 30)
+                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelNameBurger5)
+                    .addComponent(LabelNameBurger6)
+                    .addComponent(LabelNameBurger7)
+                    .addComponent(LabelNameBurger8))
+                .addGap(29, 29, 29)
                 .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FotoPizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelPizzasLayout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addComponent(CBPizza1))
@@ -810,53 +846,20 @@ public class cashSystem extends javax.swing.JFrame {
                             .addComponent(SlabelPizza1)
                             .addComponent(Spinner1Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Spinner2Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MlabelPizza1))
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(Spinner2Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(MlabelPizza1))
+                            .addComponent(CBPizza2))
                         .addGap(12, 12, 12)
                         .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(LlabelPizza1)
                             .addComponent(Spinner3Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(FotoPizza3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(SlabelPizza3)
-                            .addComponent(Spinner1Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Spinner2Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MlabelPizza3))
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LlabelPizza3)
-                            .addComponent(Spinner3Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(CBPizza3))
+                        .addGap(38, 38, 38)
+                        .addComponent(CBPizza4))
                     .addComponent(FotoPizza1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(FotoPizza2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(SlabelPizza2)
-                            .addComponent(Spinner1Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Spinner2Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MlabelPizza2))
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LlabelPizza2)
-                            .addComponent(Spinner3Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(CBPizza2))
-                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(FotoPizza4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(FotoPizza2)
                     .addGroup(jPanelPizzasLayout.createSequentialGroup()
                         .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(SlabelPizza4)
@@ -870,9 +873,33 @@ public class cashSystem extends javax.swing.JFrame {
                             .addComponent(LlabelPizza4)
                             .addComponent(Spinner3Pizza4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelPizzasLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(CBPizza4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Spinner1Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SlabelPizza2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(Spinner2Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(MlabelPizza2))
+                            .addComponent(CBPizza3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Spinner3Pizza2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LlabelPizza2)))
+                    .addGroup(jPanelPizzasLayout.createSequentialGroup()
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(SlabelPizza3)
+                            .addComponent(Spinner1Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Spinner2Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MlabelPizza3))
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LlabelPizza3)
+                            .addComponent(Spinner3Pizza3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(FotoPizza3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jPanelSubTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1260,41 +1287,41 @@ public class cashSystem extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanelPago, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTabbedPane1)
                     .addComponent(jPanelInformation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanelPago, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(79, 79, 79))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
                         .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(29, Short.MAX_VALUE))))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanelInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
-                .addComponent(jPanelPago, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(32, 32, 32))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanelInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(jPanelPago, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(32, 32, 32))))
         );
 
         jPanelInformation.getAccessibleContext().setAccessibleName("Informacion de cliente");
@@ -1553,13 +1580,13 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner1Pizza1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner1Pizza1StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 800;
+        double sPrice1 = 7500;
         int preQty;
         preQty = (Integer)Spinner1Pizza1.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[0] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
@@ -1572,7 +1599,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner2Pizza1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner2Pizza1StateChanged
         // TODO add your handling code here:
-        double mPrice1 = 1000;
+        double mPrice1 = 9000;
         int preQty;
         preQty = (Integer)Spinner2Pizza1.getValue();
         if(preQty > pizzaQty1){
@@ -1591,18 +1618,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner3Pizza1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner3Pizza1StateChanged
         // TODO add your handling code here:
-      double lPrice1 = 1300;
+      double lPrice1 = 10000;
         int preQty;
         preQty = (Integer)Spinner3Pizza1.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[2] = lPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[2] = lPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));  
         total();
@@ -1610,18 +1637,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner1Pizza2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner1Pizza2StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 750;
+        double sPrice1 = 7500;
         int preQty;
         preQty = (Integer)Spinner1Pizza2.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[3] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[3] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1629,18 +1656,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner2Pizza2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner2Pizza2StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 950;
+        double sPrice1 = 9000;
         int preQty;
         preQty = (Integer)Spinner2Pizza2.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[4] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[4] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1648,18 +1675,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner3Pizza2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner3Pizza2StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 1200;
+        double sPrice1 = 10000;
         int preQty;
         preQty = (Integer)Spinner3Pizza2.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[5] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[5] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1667,18 +1694,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner1Pizza3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner1Pizza3StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 850;
+        double sPrice1 = 8000;
         int preQty;
         preQty = (Integer)Spinner1Pizza3.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[6] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[6] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1686,18 +1713,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner2Pizza3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner2Pizza3StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 1100;
+        double sPrice1 = 9500;
         int preQty;
         preQty = (Integer)Spinner2Pizza3.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[7] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[7] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1705,18 +1732,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner3Pizza3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner3Pizza3StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 1400;
+        double sPrice1 = 11000;
         int preQty;
         preQty = (Integer)Spinner3Pizza3.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[8] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[8] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1724,18 +1751,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner1Pizza4StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner1Pizza4StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 670;
+        double sPrice1 = 7500;
         int preQty;
         preQty = (Integer)Spinner1Pizza4.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[9] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[9] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1743,18 +1770,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner2Pizza4StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner2Pizza4StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 800;
+        double sPrice1 = 8500;
         int preQty;
         preQty = (Integer)Spinner2Pizza4.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[10] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[10] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1762,18 +1789,18 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void Spinner3Pizza4StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Spinner3Pizza4StateChanged
         // TODO add your handling code here:
-        double sPrice1 = 1000;
+        double sPrice1 = 9500;
         int preQty;
         preQty = (Integer)Spinner3Pizza4.getValue();
         if(preQty > pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[11] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         else if(preQty <= pizzaQty1){
             pizzaQty1 = preQty;
             sumPizza[11] = sPrice1 * pizzaQty1;
-            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] + sumPizza[12] + sumPizza[13] + sumPizza[14] + sumPizza[15] + sumPizza[16] + sumPizza[17] + sumPizza[18] + sumPizza[19] + sumPizza[20] + sumPizza[21] + sumPizza[22] + sumPizza[23] + sumPizza[24] + sumPizza[25] + sumPizza[26] + sumPizza[27] + sumPizza[28] + sumPizza[29] ;
+            totalPizza = sumPizza[0] + sumPizza[1] + sumPizza[2] + sumPizza[3] + sumPizza[4] + sumPizza[5] + sumPizza[6] + sumPizza[7] + sumPizza[8] + sumPizza[9] + sumPizza[10] + sumPizza[11] ;
         }
         totalPizzaLabel.setText("₡"+String.valueOf(totalPizza));
         total();
@@ -1781,7 +1808,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void btnCambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambioActionPerformed
         // TODO add your handling code here:
-        //operaciones de cambio de lo pagado
+        // Boton de cambio
         try{
         String amount = txtCantidadPagada.getText();
         double paidAmount = Double.parseDouble(amount);
@@ -1805,7 +1832,7 @@ public class cashSystem extends javax.swing.JFrame {
         
         if(CBCocaColaRegular.isSelected()){
             SpinnerCocaColaRegular.setEnabled(true);
-            sumDrinks[0] = sumDrinks[0] + 25;
+            sumDrinks[0] = sumDrinks[0] + 450;
             totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
             jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
             total();
@@ -1825,7 +1852,7 @@ public class cashSystem extends javax.swing.JFrame {
         
         if(CBPepsiRegular.isSelected()){
             SpinnerPepsiRegular.setEnabled(true);
-            sumDrinks[1] = sumDrinks[1] + 25;
+            sumDrinks[1] = sumDrinks[1] + 450;
             totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
             jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
             total();
@@ -1844,7 +1871,7 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
                 if(CBSpriteRegular.isSelected()){
             SpinnerSpriteRegular.setEnabled(true);
-            sumDrinks[2] = sumDrinks[2] + 1000;
+            sumDrinks[2] = sumDrinks[2] + 450;
             totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
             jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
             total();
@@ -1863,7 +1890,7 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBTeFrioRegular.isSelected()){
             SpinnerTeFrioRegular.setEnabled(true);
-            sumDrinks[3] = sumDrinks[3] + 25;
+            sumDrinks[3] = sumDrinks[3] + 450;
             totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
             jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
             total();
@@ -1882,7 +1909,7 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBCocaColaGrande.isSelected()){
             SpinnerCocaColaGrande.setEnabled(true);
-            sumDrinks[4] = sumDrinks[4] + 75;
+            sumDrinks[4] = sumDrinks[4] + 1040;
             totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
             jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
         }
@@ -1900,7 +1927,7 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBPepsiGrande.isSelected()){
             SpinnerPepsiGrande.setEnabled(true);
-            sumDrinks[5] = sumDrinks[5] + 70;
+            sumDrinks[5] = sumDrinks[5] + 1040;
             totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
             jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
         }
@@ -1918,7 +1945,7 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBSpriteGrande.isSelected()){
             SpinnerSpriteGrande.setEnabled(true);
-            sumDrinks[6] = sumDrinks[6] + 70;
+            sumDrinks[6] = sumDrinks[6] + 1040;
             totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
             jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
         }
@@ -1936,7 +1963,7 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBTeFrioGrande.isSelected()){
             SpinnerTeFrioGrande.setEnabled(true);
-            sumDrinks[7] = sumDrinks[7] + 70;
+            sumDrinks[7] = sumDrinks[7] + 1040;
             totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
             jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
         }
@@ -1952,7 +1979,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void SpinnerCocaColaRegularStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerCocaColaRegularStateChanged
         // TODO add your handling code here:
-        double sPrice1 = 25;
+        double sPrice1 = 450;
         int preQty;
         preQty = (Integer)SpinnerCocaColaRegular.getValue();
         if(preQty > pizzaQty1){
@@ -1971,7 +1998,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void SpinnerPepsiRegularStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerPepsiRegularStateChanged
         // TODO add your handling code here:
-        double sPrice1 = 25;
+        double sPrice1 = 450;
         int preQty;
         preQty = (Integer)SpinnerPepsiRegular.getValue();
         if(preQty > pizzaQty1){
@@ -1990,7 +2017,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void SpinnerSpriteRegularStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerSpriteRegularStateChanged
         // TODO add your handling code here:
-        double sPrice1 = 1000;
+        double sPrice1 = 450;
         int preQty;
         preQty = (Integer)SpinnerSpriteRegular.getValue();
         if(preQty > pizzaQty1){
@@ -2009,7 +2036,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void SpinnerTeFrioRegularStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerTeFrioRegularStateChanged
         // TODO add your handling code here:
-        double sPrice1 = 25;
+        double sPrice1 = 450;
         int preQty;
         preQty = (Integer)SpinnerTeFrioRegular.getValue();
         if(preQty > pizzaQty1){
@@ -2028,7 +2055,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void SpinnerCocaColaGrandeStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerCocaColaGrandeStateChanged
         // TODO add your handling code here:
-        double sPrice1 = 75;
+        double sPrice1 = 1040;
         int preQty;
         preQty = (Integer)SpinnerCocaColaGrande.getValue();
         if(preQty > pizzaQty1){
@@ -2047,7 +2074,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void SpinnerPepsiGrandeStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerPepsiGrandeStateChanged
         
-        double sPrice1 = 70;
+        double sPrice1 = 1040;
         int preQty;
         preQty = (Integer)SpinnerPepsiGrande.getValue();
         if(preQty > pizzaQty1){
@@ -2066,7 +2093,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void SpinnerSpriteGrandeStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerSpriteGrandeStateChanged
       
-        double sPrice1 = 70;
+        double sPrice1 = 1040;
         int preQty;
         preQty = (Integer)SpinnerSpriteGrande.getValue();
         if(preQty > pizzaQty1){
@@ -2085,7 +2112,7 @@ public class cashSystem extends javax.swing.JFrame {
 
     private void SpinnerTeFrioGrandeStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerTeFrioGrandeStateChanged
        
-        double sPrice1 = 5;
+        double sPrice1 = 1040;
         int preQty;
         preQty = (Integer)SpinnerTeFrioGrande.getValue();
         if(preQty > pizzaQty1){
@@ -2229,6 +2256,10 @@ public class cashSystem extends javax.swing.JFrame {
     private javax.swing.JLabel LabelNameBurger2;
     private javax.swing.JLabel LabelNameBurger3;
     private javax.swing.JLabel LabelNameBurger4;
+    private javax.swing.JLabel LabelNameBurger5;
+    private javax.swing.JLabel LabelNameBurger6;
+    private javax.swing.JLabel LabelNameBurger7;
+    private javax.swing.JLabel LabelNameBurger8;
     private javax.swing.JLabel LabelSubTotalB1;
     private javax.swing.JLabel LabelSubTotalB2;
     private javax.swing.JLabel LlabelPizza1;
