@@ -1248,6 +1248,11 @@ public class cashSystem extends javax.swing.JFrame {
 
         btnFactura.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         btnFactura.setText("Generar factura");
+        btnFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFacturaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1858,10 +1863,17 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBTeFrioRegular.isSelected()){
             SpinnerTeFrioRegular.setEnabled(true);
+            sumDrinks[3] = sumDrinks[3] + 25;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
+            total();
         }
         else{
             SpinnerTeFrioRegular.setEnabled(false);
             SpinnerTeFrioRegular.setValue(1);
+            sumDrinks[3] = 0;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
             total();
         }
     }//GEN-LAST:event_CBTeFrioRegularActionPerformed
@@ -1870,10 +1882,16 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBCocaColaGrande.isSelected()){
             SpinnerCocaColaGrande.setEnabled(true);
+            sumDrinks[4] = sumDrinks[4] + 75;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
         }
         else{
             SpinnerCocaColaGrande.setEnabled(false);
             SpinnerCocaColaGrande.setValue(1);
+            sumDrinks[4] = 0;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
             total();
         }
     }//GEN-LAST:event_CBCocaColaGrandeActionPerformed
@@ -1882,10 +1900,16 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBPepsiGrande.isSelected()){
             SpinnerPepsiGrande.setEnabled(true);
+            sumDrinks[5] = sumDrinks[5] + 70;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
         }
         else{
             SpinnerPepsiGrande.setEnabled(false);
             SpinnerPepsiGrande.setValue(1);
+            sumDrinks[5] = 0;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
             total();
         }
     }//GEN-LAST:event_CBPepsiGrandeActionPerformed
@@ -1894,10 +1918,16 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBSpriteGrande.isSelected()){
             SpinnerSpriteGrande.setEnabled(true);
+            sumDrinks[6] = sumDrinks[6] + 70;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
         }
         else{
             SpinnerSpriteGrande.setEnabled(false);
             SpinnerSpriteGrande.setValue(1);
+            sumDrinks[6] = 0;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
             total();
         }
     }//GEN-LAST:event_CBSpriteGrandeActionPerformed
@@ -1906,10 +1936,16 @@ public class cashSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(CBTeFrioGrande.isSelected()){
             SpinnerTeFrioGrande.setEnabled(true);
+            sumDrinks[7] = sumDrinks[7] + 70;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
         }
         else{
             SpinnerTeFrioGrande.setEnabled(false);
             SpinnerTeFrioGrande.setValue(1);
+            sumDrinks[7] = 0;
+            totalDrinks = sumDrinks[0] + sumDrinks[1] + sumDrinks[2] + sumDrinks[3] + sumDrinks[4] + sumDrinks[5] + sumDrinks[6] + sumDrinks[7];
+            jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
             total();
         }
     }//GEN-LAST:event_CBTeFrioGrandeActionPerformed
@@ -2010,7 +2046,7 @@ public class cashSystem extends javax.swing.JFrame {
     }//GEN-LAST:event_SpinnerCocaColaGrandeStateChanged
 
     private void SpinnerPepsiGrandeStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerPepsiGrandeStateChanged
-        // TODO add your handling code here:
+        
         double sPrice1 = 70;
         int preQty;
         preQty = (Integer)SpinnerPepsiGrande.getValue();
@@ -2029,7 +2065,7 @@ public class cashSystem extends javax.swing.JFrame {
     }//GEN-LAST:event_SpinnerPepsiGrandeStateChanged
 
     private void SpinnerSpriteGrandeStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerSpriteGrandeStateChanged
-        // TODO add your handling code here:
+      
         double sPrice1 = 70;
         int preQty;
         preQty = (Integer)SpinnerSpriteGrande.getValue();
@@ -2048,7 +2084,7 @@ public class cashSystem extends javax.swing.JFrame {
     }//GEN-LAST:event_SpinnerSpriteGrandeStateChanged
 
     private void SpinnerTeFrioGrandeStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerTeFrioGrandeStateChanged
-        // TODO add your handling code here:
+       
         double sPrice1 = 5;
         int preQty;
         preQty = (Integer)SpinnerTeFrioGrande.getValue();
@@ -2065,6 +2101,64 @@ public class cashSystem extends javax.swing.JFrame {
         jLabelTotalBebidas.setText("₡"+String.valueOf(totalDrinks));
         total();
     }//GEN-LAST:event_SpinnerTeFrioGrandeStateChanged
+
+  
+    
+    private void btnFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFacturaActionPerformed
+       
+        String Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,ImpB1,ImpB2,ImpB3,ImpB4,ImpR1,ImpR2,ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8;
+        Boolean CheckB1, CheckB2, CheckB3, CheckB4, CheckR1, CheckR2, CheckR3, CheckR4, CheckR1G, CheckR2G, CheckR3G, CheckR4G;
+         
+        Nombre = txtNombreCliente.getText();
+        Orden = txtNumeroOrden.getText();
+
+        B1 = SpinnerBurger1.getValue().toString();
+        B2 = SpinnerBurger2.getValue().toString();
+        B3 = SpinnerBurger3.getValue().toString();
+        B4 = SpinnerBurger4.getValue().toString();
+        
+        R1 = SpinnerCocaColaRegular.getValue().toString();
+        R2 = SpinnerPepsiRegular.getValue().toString();
+        R3 = SpinnerSpriteRegular.getValue().toString();
+        R4 = SpinnerTeFrioRegular.getValue().toString();
+        R5 = SpinnerCocaColaGrande.getValue().toString();
+        R6 = SpinnerPepsiGrande.getValue().toString();
+        R7 = SpinnerSpriteGrande.getValue().toString();
+        R8 = SpinnerTeFrioGrande.getValue().toString();
+        
+       ImpR1 = Double.toString(sumDrinks[0]);
+       ImpR2 = Double.toString(sumDrinks[1]);
+       ImpR3 = Double.toString(sumDrinks[2]);
+       ImpR4 = Double.toString(sumDrinks[3]);
+       ImpR5 = Double.toString(sumDrinks[4]);
+       ImpR6 = Double.toString(sumDrinks[5]);
+       ImpR7 = Double.toString(sumDrinks[6]);
+       ImpR8 = Double.toString(sumDrinks[7]);
+        
+        
+        ImpB1 = Double.toString(subSum1);
+        ImpB2 = Double.toString(subSum2);
+        ImpB3 = Double.toString(subSum3);
+        ImpB4 = Double.toString(subSum4);
+        
+        CheckB1 = CBBurger1.isSelected();
+        CheckB2 = CBBurger2.isSelected();
+        CheckB3 = CBBurger3.isSelected();
+        CheckB4 = CBBurger4.isSelected();
+        
+        
+        CheckR1 = CBCocaColaRegular.isSelected();
+        CheckR2 = CBPepsiRegular.isSelected();
+        CheckR3 = CBSpriteRegular.isSelected();
+        CheckR4 = CBTeFrioRegular.isSelected();
+        CheckR1G = CBCocaColaGrande.isSelected();
+        CheckR2G = CBPepsiGrande.isSelected();
+        CheckR3G = CBSpriteGrande.isSelected();
+        CheckR4G = CBTeFrioGrande.isSelected();
+        
+       new facturaSystem(Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,ImpB1,ImpB2,ImpB3,ImpB4,ImpR1,ImpR2,ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8,CheckB1,CheckB2,CheckB3,CheckB4,
+               CheckR1,CheckR2,CheckR3,CheckR4,CheckR1G,CheckR2G,CheckR3G,CheckR4G).setVisible(true);
+    }//GEN-LAST:event_btnFacturaActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1732,6 +1732,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Generar factura"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFacturaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
