@@ -705,14 +705,16 @@
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="Spinner2Pizza1" min="-2" pref="40" max="-2" attributes="0"/>
                                                   <Component id="Spinner3Pizza1" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="Spinner2Pizza1" min="-2" pref="40" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="CBPizza2" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Component id="CBPizza2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
                                       <Component id="FotoPizza2" min="-2" pref="93" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -769,9 +771,9 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="12" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="CBPizza4" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="LabelNameBurger8" max="32767" attributes="0"/>
                                   <Component id="FotoPizza4" max="32767" attributes="0"/>
@@ -812,90 +814,91 @@
                           <Component id="LabelNameBurger7" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="LabelNameBurger8" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="FotoPizza4" min="-2" pref="91" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="FotoPizza4" min="-2" pref="91" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="SlabelPizza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Spinner1Pizza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="Spinner2Pizza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="MlabelPizza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="CBPizza2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="LlabelPizza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Spinner3Pizza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="FotoPizza1" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="FotoPizza2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="SlabelPizza4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Spinner1Pizza4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="Spinner2Pizza4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="MlabelPizza4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="LlabelPizza4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Spinner3Pizza4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="Spinner1Pizza2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="SlabelPizza2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="Spinner2Pizza2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="MlabelPizza2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="CBPizza3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="Spinner3Pizza2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="LlabelPizza2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="SlabelPizza3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Spinner1Pizza3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="Spinner2Pizza3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="MlabelPizza3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="CBPizza4" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="LlabelPizza3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Spinner3Pizza3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="FotoPizza3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                               <Component id="CBPizza1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="SlabelPizza1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Spinner1Pizza1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="Spinner2Pizza1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="MlabelPizza1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="CBPizza2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="LlabelPizza1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Spinner3Pizza1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="CBPizza4" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="FotoPizza1" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
-                          <Component id="FotoPizza2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="SlabelPizza4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Spinner1Pizza4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="Spinner2Pizza4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="MlabelPizza4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="LlabelPizza4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Spinner3Pizza4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="Spinner1Pizza2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="SlabelPizza2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="Spinner2Pizza2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="MlabelPizza2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="CBPizza3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="Spinner3Pizza2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="LlabelPizza2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="SlabelPizza3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Spinner1Pizza3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="Spinner2Pizza3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="MlabelPizza3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="LlabelPizza3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Spinner3Pizza3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="FotoPizza3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="73" max="32767" attributes="0"/>
                       <Component id="jPanelSubTotal" min="-2" max="-2" attributes="0"/>

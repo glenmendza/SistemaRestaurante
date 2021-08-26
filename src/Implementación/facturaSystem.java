@@ -25,6 +25,12 @@ DefaultTableModel model=new DefaultTableModel();
        
     }
 
+        public void mostrardia(){
+    
+        jLabel9.setText(date.horacompleta);
+        jLabel11.setText(date.fechacompleta);
+        
+    }
     
   
     facturaSystem(String Nombre,String Orden,String B1,String B2,String B3,String B4,String R1, String R2, String R3,String R4, String R5, String R6,String R7, String R8, String ImpB1, String ImpB2,
@@ -203,13 +209,6 @@ DefaultTableModel model=new DefaultTableModel();
     
      private double redondear(double num){
         return Math.rint(num*100)/100;
-    }
-    
-    public void mostrardia(){
-    
-        jLabel9.setText(date.horacompleta);
-        jLabel11.setText(date.fechacompleta);
-        
     }
     
   private void Total(){
