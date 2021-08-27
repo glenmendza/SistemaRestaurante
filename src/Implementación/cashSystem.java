@@ -1394,7 +1394,7 @@ public class cashSystem extends javax.swing.JFrame {
        if(CBBurger3.isSelected()){
             SpinnerBurger3.setEnabled(true);
             subSum3 = subSum3 + 3350;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum1 + subSum2 + subSum3 + subSum4; 
             LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
         }
         else{
@@ -2142,11 +2142,15 @@ public class cashSystem extends javax.swing.JFrame {
         this.setVisible(false);
         new facturaSystem().setVisible(true);
         
-        String Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,P1P,P1M,P1G,P2P,P2M,P2G,P3P,P3M,P3G,P4P,P4M,P4G,ImpB1,ImpB2,ImpB3,ImpB4,ImpP1P,ImpP1M,ImpP1G,ImpP2P,ImpP2M,ImpP2G,ImpP3P,ImpP3M,ImpP3G,ImpP4P,ImpP4M,ImpP4G,ImpR1,ImpR2,ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8;
+        String Nombre,Orden,Hora,Fecha,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,P1P,P1M,P1G,P2P,P2M,P2G,P3P,P3M,P3G,P4P,P4M,P4G,ImpB1,ImpB2,ImpB3,ImpB4,ImpP1P,ImpP1M,ImpP1G,ImpP2P,ImpP2M,ImpP2G,ImpP3P,ImpP3M,ImpP3G,ImpP4P,ImpP4M,ImpP4G,ImpR1,ImpR2,ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8;
         Boolean CheckB1,CheckB2,CheckB3,CheckB4,CheckP1,CheckP2,CheckP3,CheckP4,CheckR1,CheckR2,CheckR3,CheckR4,CheckR1G,CheckR2G,CheckR3G,CheckR4G;
+       
          
         Nombre = txtNombreCliente.getText();
         Orden = txtNumeroOrden.getText();
+        Hora = date.horacompleta;
+        Fecha = date.fechacompleta;
+       
 
         B1 = SpinnerBurger1.getValue().toString();
         B2 = SpinnerBurger2.getValue().toString();
@@ -2218,7 +2222,7 @@ public class cashSystem extends javax.swing.JFrame {
        CheckP3 = CBPizza3.isSelected();
        CheckP4 = CBPizza4.isSelected();
         
-        
+ 
         
         
         
@@ -2233,7 +2237,7 @@ public class cashSystem extends javax.swing.JFrame {
        CheckR3G = CBSpriteGrande.isSelected();
        CheckR4G = CBTeFrioGrande.isSelected();
         
-       new facturaSystem(Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,P1P,P1M,P1G,P2P,P2M,P2G,P3P,P3M,P3G,P4P,P4M,P4G,ImpB1,ImpB2,ImpB3,ImpB4,ImpP1P,ImpP1M,ImpP1G,ImpP2P,ImpP2M,ImpP2G,ImpP3P,ImpP3M,ImpP3G,ImpP4P,ImpP4M,ImpP4G,ImpR1,ImpR2,
+        new facturaSystem(Nombre,Orden,Hora,Fecha,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,P1P,P1M,P1G,P2P,P2M,P2G,P3P,P3M,P3G,P4P,P4M,P4G,ImpB1,ImpB2,ImpB3,ImpB4,ImpP1P,ImpP1M,ImpP1G,ImpP2P,ImpP2M,ImpP2G,ImpP3P,ImpP3M,ImpP3G,ImpP4P,ImpP4M,ImpP4G,ImpR1,ImpR2,
                ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8,CheckB1,CheckB2,CheckB3,CheckB4,CheckP1,CheckP2,CheckP3,CheckP4,CheckR1,CheckR2,CheckR3,CheckR4,CheckR1G,CheckR2G,CheckR3G,CheckR4G).setVisible(true);
     }//GEN-LAST:event_btnFacturaActionPerformed
 

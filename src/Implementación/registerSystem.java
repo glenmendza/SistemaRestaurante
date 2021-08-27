@@ -48,7 +48,7 @@ public class registerSystem extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel2.setBackground(new java.awt.Color(255, 51, 51));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(406, 100));
 

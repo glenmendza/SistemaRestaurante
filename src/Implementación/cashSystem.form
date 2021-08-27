@@ -96,9 +96,6 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-      </AccessibilityProperties>
 
       <Layout>
         <DimensionLayout dim="0">
