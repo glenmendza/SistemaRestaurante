@@ -39,14 +39,6 @@ public class cashSystem extends javax.swing.JFrame {
     int qty1 = 0;
     int qty2 = 0;
     int qty3 = 0;
-    int qty4 = 0;
-    int qty5 = 0;
-    int qty6 = 0;
-    int qty7 = 0;
-    int qty8 = 0;
-    int qty9 = 0;
-    int qty10 = 0;
-    int qty11 = 0; 
     
     /**
      * Creates new form cashSystem
@@ -428,15 +420,12 @@ public class cashSystem extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addComponent(LabelCantidadBurger3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4))
+                        .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelBurgersLayout.createSequentialGroup()
                         .addComponent(CBBurger3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addComponent(LabelNameBurger3)
-                                .addGap(10, 10, 10))
+                            .addComponent(LabelNameBurger3)
                             .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(CBBurger4)
@@ -846,10 +835,11 @@ public class cashSystem extends javax.swing.JFrame {
                                     .addComponent(SlabelPizza1)
                                     .addComponent(Spinner1Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Spinner2Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(MlabelPizza1)
-                                    .addComponent(CBPizza2))
+                                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CBPizza2)
+                                    .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(Spinner2Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(MlabelPizza1)))
                                 .addGap(12, 12, 12)
                                 .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(LlabelPizza1)
@@ -913,10 +903,10 @@ public class cashSystem extends javax.swing.JFrame {
         jLabelTotalPagar2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTotalPagar2.setText("₡0.0");
 
-        jLabelTotalPagar1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabelTotalPagar1.setText("Total a pagar");
+        jLabelTotalPagar1.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
+        jLabelTotalPagar1.setText("Total a pagar (sin IVA)");
 
-        jLabelCambio1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jLabelCambio1.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         jLabelCambio1.setText("Cambio");
 
         jLabelCambio2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N

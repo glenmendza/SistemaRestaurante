@@ -311,16 +311,12 @@
                               <Component id="LabelCantidadBurger3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="SpinnerBurger3" linkSize="1" min="-2" pref="42" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="CBBurger3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="LabelNameBurger3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="LabelNameBurger3" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="FotoBurger3" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -825,10 +821,12 @@
                                           <Component id="Spinner1Pizza1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="Spinner2Pizza1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="MlabelPizza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="CBPizza2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="Spinner2Pizza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="MlabelPizza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1305,15 +1303,15 @@
         <Component class="javax.swing.JLabel" name="jLabelTotalPagar1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="SansSerif" size="18" style="0"/>
+              <Font name="SansSerif" size="16" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Total a pagar"/>
+            <Property name="text" type="java.lang.String" value="Total a pagar (sin IVA)"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelCambio1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="SansSerif" size="18" style="0"/>
+              <Font name="SansSerif" size="16" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Cambio"/>
           </Properties>
