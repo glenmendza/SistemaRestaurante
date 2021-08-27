@@ -39,14 +39,6 @@ public class cashSystem extends javax.swing.JFrame {
     int qty1 = 0;
     int qty2 = 0;
     int qty3 = 0;
-    int qty4 = 0;
-    int qty5 = 0;
-    int qty6 = 0;
-    int qty7 = 0;
-    int qty8 = 0;
-    int qty9 = 0;
-    int qty10 = 0;
-    int qty11 = 0; 
     
     /**
      * Creates new form cashSystem
@@ -911,10 +903,10 @@ public class cashSystem extends javax.swing.JFrame {
         jLabelTotalPagar2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTotalPagar2.setText("₡0.0");
 
-        jLabelTotalPagar1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabelTotalPagar1.setText("Total a pagar");
+        jLabelTotalPagar1.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
+        jLabelTotalPagar1.setText("Total a pagar (sin IVA)");
 
-        jLabelCambio1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jLabelCambio1.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         jLabelCambio1.setText("Cambio");
 
         jLabelCambio2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
