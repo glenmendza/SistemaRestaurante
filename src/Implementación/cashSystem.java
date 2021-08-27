@@ -42,9 +42,17 @@ public class cashSystem extends javax.swing.JFrame {
         mostrardia();
     }
     
+        private double redondear(double num){
+        return Math.rint(num*100)/100;
+        }
     public void total(){
+        
         total = totalBurger + totalPizza + totalDrinks;
         jLabelTotalPagar2.setText("₡"+String.valueOf(total));
+        double iva = total*0.13;
+        double total2=(iva+total);
+        total2=redondear(total2);
+        jLabelTotalPagar4.setText("₡"+String.valueOf(total2));
     }
 
     /**
@@ -141,6 +149,8 @@ public class cashSystem extends javax.swing.JFrame {
         txtCantidadPagada = new javax.swing.JTextField();
         btnCambio = new javax.swing.JButton();
         jLabelNota = new javax.swing.JLabel();
+        jLabelTotalPagar3 = new javax.swing.JLabel();
+        jLabelTotalPagar4 = new javax.swing.JLabel();
         jPanelBebidas = new javax.swing.JPanel();
         CBCocaColaRegular = new javax.swing.JCheckBox();
         SpinnerCocaColaRegular = new javax.swing.JSpinner();
@@ -948,7 +958,7 @@ public class cashSystem extends javax.swing.JFrame {
         jPanelCambioLayout.setVerticalGroup(
             jPanelCambioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCambioLayout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addComponent(jLabelNota, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCambioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -961,6 +971,13 @@ public class cashSystem extends javax.swing.JFrame {
 
         jPanelCambioLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCambio, jLabelCantidadPagada, txtCantidadPagada});
 
+        jLabelTotalPagar3.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
+        jLabelTotalPagar3.setText("Total a pagar (con  IVA)");
+
+        jLabelTotalPagar4.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jLabelTotalPagar4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelTotalPagar4.setText("₡0.0");
+
         javax.swing.GroupLayout jPanelPagoLayout = new javax.swing.GroupLayout(jPanelPago);
         jPanelPago.setLayout(jPanelPagoLayout);
         jPanelPagoLayout.setHorizontalGroup(
@@ -970,11 +987,13 @@ public class cashSystem extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanelPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelTotalPagar1)
-                    .addComponent(jLabelCambio1))
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addGroup(jPanelPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelCambio2)
-                    .addComponent(jLabelTotalPagar2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelCambio1)
+                    .addComponent(jLabelTotalPagar3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelCambio2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelTotalPagar2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTotalPagar4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
         );
 
@@ -983,11 +1002,15 @@ public class cashSystem extends javax.swing.JFrame {
         jPanelPagoLayout.setVerticalGroup(
             jPanelPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelPagoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(jPanelPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelTotalPagar2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelTotalPagar1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jLabelTotalPagar1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTotalPagar2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTotalPagar3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTotalPagar4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelCambio1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCambio2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1323,8 +1346,6 @@ public class cashSystem extends javax.swing.JFrame {
                         .addComponent(jPanelPago, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(32, 32, 32))))
         );
-
-        jPanelInformation.getAccessibleContext().setAccessibleName("");
 
         pack();
         setLocationRelativeTo(null);
@@ -2371,6 +2392,8 @@ public class cashSystem extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTotalBebidas;
     private javax.swing.JLabel jLabelTotalPagar1;
     private javax.swing.JLabel jLabelTotalPagar2;
+    private javax.swing.JLabel jLabelTotalPagar3;
+    private javax.swing.JLabel jLabelTotalPagar4;
     private javax.swing.JPanel jPanelBebidas;
     private javax.swing.JPanel jPanelBurgers;
     private javax.swing.JPanel jPanelCambio;
