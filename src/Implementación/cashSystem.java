@@ -22,18 +22,12 @@ public class cashSystem extends javax.swing.JFrame {
     double[] sumDrinks = new double[8]; // Arreglo de Bebidas
     int pizzaQty1 = 0;
     // //Subtotal de Burgers
+    
     double subSum1 = 0;
     double subSum2 = 0;
     double subSum3 = 0;
     double subSum4 = 0;
-    double subSum5 = 0;
-    double subSum6 = 0;
-    double subSum7 = 0;
-    double subSum8 = 0;
-    double subSum9 = 0;
-    double subSum10 = 0;
-    double subSum11 = 0;
-    double subSum12 = 0;
+    
     // //Cantidad de Burgers
     int qty = 0;
     int qty1 = 0;
@@ -1356,14 +1350,14 @@ public class cashSystem extends javax.swing.JFrame {
         if(CBBurger1.isSelected()){
             SpinnerBurger1.setEnabled(true);
             subSum1 = subSum1 + 2050;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
             LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
         }
         else{
             SpinnerBurger1.setEnabled(false);
             SpinnerBurger1.setValue(1);
             subSum1 = 0;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
             LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
             
         }
@@ -1375,14 +1369,14 @@ public class cashSystem extends javax.swing.JFrame {
        if(CBBurger2.isSelected()){
             SpinnerBurger2.setEnabled(true);
             subSum2 = subSum2 + 2850;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
             LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
         }
         else{
             SpinnerBurger2.setEnabled(false);
             SpinnerBurger2.setValue(1);
             subSum2 = 0;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
             LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
             
         }
@@ -1401,7 +1395,7 @@ public class cashSystem extends javax.swing.JFrame {
             SpinnerBurger3.setEnabled(false);
             SpinnerBurger3.setValue(1);
             subSum3 = 0;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
             LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
        }
        total();
@@ -1412,14 +1406,14 @@ public class cashSystem extends javax.swing.JFrame {
         if(CBBurger4.isSelected()){
             SpinnerBurger4.setEnabled(true);
             subSum4 = subSum4 + 3550;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
             LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
         }
         else{
             SpinnerBurger4.setEnabled(false);
             SpinnerBurger4.setValue(1);
             subSum4 = 0;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
             LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
        }
         total();
@@ -1434,12 +1428,12 @@ public class cashSystem extends javax.swing.JFrame {
         if(preQty > qty){
             qty = preQty;
             subSum1 = spinRate1 * preQty;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
         }
         else if(preQty<=qty){
             qty = preQty;
             subSum1= spinRate1 * preQty;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
         }
         LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
         total();
@@ -1456,12 +1450,12 @@ public class cashSystem extends javax.swing.JFrame {
         if(preQty1 > qty1){
             qty1 = preQty1;
             subSum2 = spinRate2 * preQty1;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
         }
         else if(preQty1<=qty1){
             qty1 = preQty1;
             subSum2 = spinRate2 * preQty1;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
         }
         LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
        }
@@ -1477,12 +1471,12 @@ public class cashSystem extends javax.swing.JFrame {
         if(preQty1 > qty2){
             qty2 = preQty1;
             subSum3 = spinRate3 * preQty1;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
         }
         else if(preQty1<=qty2){
             qty2 = preQty1;
             subSum3 = spinRate3 * preQty1;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
         }
         LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
        }
@@ -1498,12 +1492,12 @@ public class cashSystem extends javax.swing.JFrame {
         if(preQty1 > qty3){
             qty3 = preQty1;
             subSum4 = spinRate4 * preQty1;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
         }
         else if(preQty1<=qty3){
             qty3 = preQty1;
             subSum4 = spinRate4 * preQty1;
-            totalBurger = subSum2 + subSum1 + subSum3 + subSum4 + subSum5 + subSum6 + subSum7 + subSum8 + subSum9 + subSum10 + subSum11 + subSum12;
+            totalBurger = subSum2 + subSum1 + subSum3 + subSum4;
         }
         LabelSubTotalB2.setText("₡"+String.valueOf(totalBurger));
        }

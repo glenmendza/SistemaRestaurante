@@ -221,7 +221,7 @@ DefaultTableModel model=new DefaultTableModel();
       if(CheckP3){
         String rowData[]=new String[4];
         rowData[0]= "Hawaiana [Pequeña]";
-        rowData[1]= "7500";
+        rowData[1]= "8000";
         rowData[2]= P3P;
         rowData[3]= ImpP3P;
         model.addRow(rowData);
@@ -230,7 +230,7 @@ DefaultTableModel model=new DefaultTableModel();
        if(CheckP3){
         String rowData[]=new String[4];
         rowData[0]= "Hawaiana [Mediana]";
-        rowData[1]= "9000";
+        rowData[1]= "9500";
         rowData[2]= P3M;
         rowData[3]= ImpP3M;
         model.addRow(rowData);
@@ -239,7 +239,7 @@ DefaultTableModel model=new DefaultTableModel();
       if(CheckP3){
         String rowData[]=new String[4];
         rowData[0]= "Hawaiana [Grande]";
-        rowData[1]= "10000";
+        rowData[1]= "11000";
         rowData[2]= P3G;
         rowData[3]= ImpP3G;
         model.addRow(rowData);
@@ -257,7 +257,7 @@ DefaultTableModel model=new DefaultTableModel();
        if(CheckP4){
         String rowData[]=new String[4];
         rowData[0]= "Vegetariana [Mediana]";
-        rowData[1]= "9000";
+        rowData[1]= "8500";
         rowData[2]= P4M;
         rowData[3]= ImpP4M;
         model.addRow(rowData);
@@ -266,7 +266,7 @@ DefaultTableModel model=new DefaultTableModel();
       if(CheckP4){
         String rowData[]=new String[4];
         rowData[0]= "Vegetariana [Grande]";
-        rowData[1]= "10000";
+        rowData[1]= "9500";
         rowData[2]= P4G;
         rowData[3]= ImpP4G;
         model.addRow(rowData);
@@ -277,7 +277,7 @@ DefaultTableModel model=new DefaultTableModel();
      if (CheckR1){
        String rowData[]=new String[4];
        rowData[0]= "Coca Cola Regular [14oz]";
-       rowData[1]= "25";
+       rowData[1]= "450";
        rowData[2]= R1;
        rowData[3]= ImpR1;
        model.addRow(rowData);
@@ -286,7 +286,7 @@ DefaultTableModel model=new DefaultTableModel();
      if (CheckR2){
        String rowData[]=new String[4];
        rowData[0]= "Pepsi Regular [14oz]";
-       rowData[1]= "25";
+       rowData[1]= "450";
        rowData[2]= R2;
        rowData[3]= ImpR2;
        model.addRow(rowData);
@@ -295,7 +295,7 @@ DefaultTableModel model=new DefaultTableModel();
      if (CheckR3){
        String rowData[]=new String[4];
        rowData[0]= "Sprite Regular [14oz]";
-       rowData[1]= "1000";
+       rowData[1]= "450";
        rowData[2]= R3;
        rowData[3]= ImpR3;
        model.addRow(rowData);
@@ -304,7 +304,7 @@ DefaultTableModel model=new DefaultTableModel();
      if (CheckR4){
        String rowData[]=new String[4];
        rowData[0]= "Te Frio Regular [14oz]";
-       rowData[1]= "25";
+       rowData[1]= "450";
        rowData[2]= R4;
        rowData[3]= ImpR4;
        model.addRow(rowData);
@@ -313,7 +313,7 @@ DefaultTableModel model=new DefaultTableModel();
      if (CheckR1G){
        String rowData[]=new String[4];
        rowData[0]= "Coca Cola Regular [21oz]";
-       rowData[1]= "75";
+       rowData[1]= "1040";
        rowData[2]= R5;
        rowData[3]= ImpR5;
        model.addRow(rowData);
@@ -322,7 +322,7 @@ DefaultTableModel model=new DefaultTableModel();
        if (CheckR2G){
        String rowData[]=new String[4];
        rowData[0]= "Pepsi Regular [21oz]";
-       rowData[1]= "70";
+       rowData[1]= "1040";
        rowData[2]= R6;
        rowData[3]= ImpR6;
        model.addRow(rowData);
@@ -331,7 +331,7 @@ DefaultTableModel model=new DefaultTableModel();
        if (CheckR3G){
        String rowData[]=new String[4];
        rowData[0]= "Sprite Regular [21oz]";
-       rowData[1]= "70";
+       rowData[1]= "1040";
        rowData[2]= R7;
        rowData[3]= ImpR7;
        model.addRow(rowData);
@@ -340,7 +340,7 @@ DefaultTableModel model=new DefaultTableModel();
        if (CheckR4G){
        String rowData[]=new String[4];
        rowData[0]= "Te Frio Regular [21oz]";
-       rowData[1]= "70";
+       rowData[1]= "1040";
        rowData[2]= R8;
        rowData[3]= ImpR8;
        model.addRow(rowData);
