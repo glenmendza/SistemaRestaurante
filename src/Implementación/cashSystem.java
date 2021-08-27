@@ -169,6 +169,7 @@ public class cashSystem extends javax.swing.JFrame {
         jLabelTotalBebidas = new javax.swing.JLabel();
         jLabelPagos = new javax.swing.JLabel();
         btnFactura = new javax.swing.JButton();
+        btnFactura1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pipe's Burguesas");
@@ -1273,6 +1274,14 @@ public class cashSystem extends javax.swing.JFrame {
             }
         });
 
+        btnFactura1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        btnFactura1.setText("Logout");
+        btnFactura1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFactura1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1289,11 +1298,14 @@ public class cashSystem extends javax.swing.JFrame {
                         .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(51, 51, 51))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(16, 16, 16))))
+                        .addComponent(btnFactura1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(95, 95, 95))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1304,8 +1316,10 @@ public class cashSystem extends javax.swing.JFrame {
                         .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
                         .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(81, 81, 81)
+                        .addGap(53, 53, 53)
                         .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnFactura1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanelInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2124,7 +2138,10 @@ public class cashSystem extends javax.swing.JFrame {
   
     
     private void btnFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFacturaActionPerformed
-       
+        
+        this.setVisible(false);
+        new facturaSystem().setVisible(true);
+        
         String Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,P1P,P1M,P1G,P2P,P2M,P2G,P3P,P3M,P3G,P4P,P4M,P4G,ImpB1,ImpB2,ImpB3,ImpB4,ImpP1P,ImpP1M,ImpP1G,ImpP2P,ImpP2M,ImpP2G,ImpP3P,ImpP3M,ImpP3G,ImpP4P,ImpP4M,ImpP4G,ImpR1,ImpR2,ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8;
         Boolean CheckB1,CheckB2,CheckB3,CheckB4,CheckP1,CheckP2,CheckP3,CheckP4,CheckR1,CheckR2,CheckR3,CheckR4,CheckR1G,CheckR2G,CheckR3G,CheckR4G;
          
@@ -2219,6 +2236,12 @@ public class cashSystem extends javax.swing.JFrame {
        new facturaSystem(Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,P1P,P1M,P1G,P2P,P2M,P2G,P3P,P3M,P3G,P4P,P4M,P4G,ImpB1,ImpB2,ImpB3,ImpB4,ImpP1P,ImpP1M,ImpP1G,ImpP2P,ImpP2M,ImpP2G,ImpP3P,ImpP3M,ImpP3G,ImpP4P,ImpP4M,ImpP4G,ImpR1,ImpR2,
                ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8,CheckB1,CheckB2,CheckB3,CheckB4,CheckP1,CheckP2,CheckP3,CheckP4,CheckR1,CheckR2,CheckR3,CheckR4,CheckR1G,CheckR2G,CheckR3G,CheckR4G).setVisible(true);
     }//GEN-LAST:event_btnFacturaActionPerformed
+
+    private void btnFactura1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFactura1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new loginSystem().setVisible(true);
+    }//GEN-LAST:event_btnFactura1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2333,6 +2356,7 @@ public class cashSystem extends javax.swing.JFrame {
     private javax.swing.JSpinner SpinnerTeFrioRegular;
     private javax.swing.JButton btnCambio;
     private javax.swing.JButton btnFactura;
+    private javax.swing.JButton btnFactura1;
     private javax.swing.JLabel jLabelCambio1;
     private javax.swing.JLabel jLabelCambio2;
     private javax.swing.JLabel jLabelCantidadPagada;

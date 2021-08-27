@@ -400,6 +400,8 @@ DefaultTableModel model=new DefaultTableModel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        btnFactura2 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         miSave = new javax.swing.JMenuItem();
@@ -582,6 +584,21 @@ DefaultTableModel model=new DefaultTableModel();
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnFactura2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        btnFactura2.setText("Generar");
+        btnFactura2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFactura2ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-arrow_icon-icons.com_54057 (1).png"))); // NOI18N
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
+
         jMenu1.setText("File");
 
         miSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
@@ -602,16 +619,29 @@ DefaultTableModel model=new DefaultTableModel();
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(135, 135, 135)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel12)
+                .addGap(49, 49, 49)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addComponent(btnFactura2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnFactura2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel12)))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
@@ -628,7 +658,7 @@ DefaultTableModel model=new DefaultTableModel();
         if(seleccionar.showDialog(null,"Save")==JFileChooser.APPROVE_OPTION)
         {
             archivo=seleccionar.getSelectedFile();
-            if (archivo.getName().endsWith("txt"))
+            if (archivo.getName().endsWith("xlsx"))
             {
                 documento=jScrollPane2.getName();
                 //documento=jTextArea1.getText();
@@ -648,6 +678,23 @@ DefaultTableModel model=new DefaultTableModel();
         }
         
     }//GEN-LAST:event_miSaveActionPerformed
+
+    private void btnFactura2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFactura2ActionPerformed
+        int numero = (int)(Math.random()*25+1);
+        String tiempo = "10 min";
+        JOptionPane.showMessageDialog(null, "La orden ya está siendo procesada\n"
+                + "El tiempo estimado es de: "+numero+" minutos", "Pipe's Burguesas",JOptionPane.OK_OPTION);
+        
+        this.setVisible(false);
+        new cashSystem().setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnFactura2ActionPerformed
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new cashSystem().setVisible(true);
+    }//GEN-LAST:event_jLabel12MouseClicked
 
         public String GuardarArchivo(File arch,String doc)
     {
@@ -695,7 +742,7 @@ DefaultTableModel model=new DefaultTableModel();
             java.util.logging.Logger.getLogger(facturaSystem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+  
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -706,9 +753,11 @@ DefaultTableModel model=new DefaultTableModel();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> PagoComboBox;
+    private javax.swing.JButton btnFactura2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
