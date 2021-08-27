@@ -33,9 +33,9 @@ DefaultTableModel model=new DefaultTableModel();
     }
     
   
-    facturaSystem(String Nombre,String Orden,String B1,String B2,String B3,String B4,String R1, String R2, String R3,String R4, String R5, String R6,String R7, String R8, String ImpB1, String ImpB2,
-            String ImpB3, String ImpB4, String ImpR1, String ImpR2, String ImpR3, String ImpR4, String ImpR5, String ImpR6, String ImpR7, String ImpR8, Boolean CheckB1, Boolean CheckB2, Boolean CheckB3,
-            Boolean CheckB4, Boolean CheckR1, Boolean CheckR2, Boolean CheckR3, Boolean CheckR4, Boolean CheckR1G, Boolean CheckR2G, Boolean CheckR3G, Boolean CheckR4G) {
+    facturaSystem(String Nombre,String Orden,String B1,String B2,String B3,String B4,String R1,String R2,String R3,String R4,String R5,String R6,String R7,String R8,String P1P,String P1M,String P1G,String P2P,String P2M,String P2G,String P3P,String P3M,String P3G,String P4P,String P4M,String P4G,String ImpB1,String ImpB2,
+            String ImpB3, String ImpB4,String ImpP1P,String ImpP1M,String ImpP1G,String ImpP2P, String ImpP2M, String ImpP2G,String ImpP3P,String ImpP3M,String ImpP3G,String ImpP4P,String ImpP4M,String ImpP4G,String ImpR1, String ImpR2, String ImpR3, String ImpR4, String ImpR5,String ImpR6,
+            String ImpR7,String ImpR8,Boolean CheckB1,Boolean CheckB2,Boolean CheckB3, Boolean CheckB4,Boolean CheckP1,Boolean CheckP2,Boolean CheckP3,Boolean CheckP4,Boolean CheckR1,Boolean CheckR2,Boolean CheckR3,Boolean CheckR4,Boolean CheckR1G,Boolean CheckR2G,Boolean CheckR3G,Boolean CheckR4G) {
       
         initComponents();
         tablaFactura.setModel(model);
@@ -59,10 +59,34 @@ DefaultTableModel model=new DefaultTableModel();
         this.R6 = R6;
         this.R7 = R7;
         this.R8 = R8;
+        this.P1P = P1P;
+        this.P1M = P1M;
+        this.P1G = P1G;
+        this.P2P = P2P;
+        this.P2M = P2M;
+        this.P2G = P2G;
+        this.P3P = P3P;
+        this.P3M = P3M;
+        this.P3G = P3G;
+        this.P4P = P4P;
+        this.P4M = P4M;
+        this.P4G = P4G;
         this.ImpB1 = ImpB1;
         this.ImpB2 = ImpB2;
         this.ImpB3 = ImpB3;
         this.ImpB4 = ImpB4;
+        this.ImpP1P = ImpP1P;
+        this.ImpP1M = ImpP1M;
+        this.ImpP1G = ImpP1G;
+        this.ImpP2P = ImpP2P;
+        this.ImpP2M = ImpP2M;
+        this.ImpP2G = ImpP2G;
+        this.ImpP3P = ImpP3P;
+        this.ImpP3M = ImpP3M;
+        this.ImpP3G = ImpP3G;
+        this.ImpP4P = ImpP4P;
+        this.ImpP4M = ImpP4M;
+        this.ImpP4G = ImpP4G;
         this.ImpR1 = ImpR1;
         this.ImpR2 = ImpR2;
         this.ImpR3 = ImpR3;
@@ -75,6 +99,10 @@ DefaultTableModel model=new DefaultTableModel();
         this.CheckB2 = CheckB2;
         this.CheckB3 = CheckB3;
         this.CheckB4 = CheckB4;
+        this.CheckP1 = CheckP1;
+        this.CheckP2 = CheckP2;
+        this.CheckP3 = CheckP3;
+        this.CheckP4 = CheckP4;
         this.CheckR1 = CheckR1;
         this.CheckR2 = CheckR2;
         this.CheckR3 = CheckR3;
@@ -128,9 +156,119 @@ DefaultTableModel model=new DefaultTableModel();
         rowData[3]= ImpB4;
         model.addRow(rowData);
         Total();  
+        
+        
+      // Facturacion de Pizza
+      
       }
-      
-      
+      if(CheckP1){
+        String rowData[]=new String[4];
+        rowData[0]= "Jamon y Queso [Pequeña]";
+        rowData[1]= "7500";
+        rowData[2]= P1P;
+        rowData[3]= ImpP1P;
+        model.addRow(rowData);
+        Total(); 
+      }
+       if(CheckP1){
+        String rowData[]=new String[4];
+        rowData[0]= "Jamon y Queso [Mediana]";
+        rowData[1]= "9000";
+        rowData[2]= P1M;
+        rowData[3]= ImpP1M;
+        model.addRow(rowData);
+        Total(); 
+      }
+      if(CheckP1){
+        String rowData[]=new String[4];
+        rowData[0]= "Jamon y Queso [Grande]";
+        rowData[1]= "10000";
+        rowData[2]= P1G;
+        rowData[3]= ImpP1G;
+        model.addRow(rowData);
+        Total(); 
+      }
+      if(CheckP2){
+        String rowData[]=new String[4];
+        rowData[0]= "Suprema [Pequeña]";
+        rowData[1]= "7500";
+        rowData[2]= P2P;
+        rowData[3]= ImpP2P;
+        model.addRow(rowData);
+        Total(); 
+      }
+       if(CheckP2){
+        String rowData[]=new String[4];
+        rowData[0]= "Suprema [Mediana]";
+        rowData[1]= "9000";
+        rowData[2]= P2M;
+        rowData[3]= ImpP2M;
+        model.addRow(rowData);
+        Total(); 
+      }
+      if(CheckP2){
+        String rowData[]=new String[4];
+        rowData[0]= "Suprema [Grande]";
+        rowData[1]= "10000";
+        rowData[2]= P2G;
+        rowData[3]= ImpP2G;
+        model.addRow(rowData);
+        Total(); 
+      }
+      if(CheckP3){
+        String rowData[]=new String[4];
+        rowData[0]= "Hawaiana [Pequeña]";
+        rowData[1]= "7500";
+        rowData[2]= P3P;
+        rowData[3]= ImpP3P;
+        model.addRow(rowData);
+        Total(); 
+      }
+       if(CheckP3){
+        String rowData[]=new String[4];
+        rowData[0]= "Hawaiana [Mediana]";
+        rowData[1]= "9000";
+        rowData[2]= P3M;
+        rowData[3]= ImpP3M;
+        model.addRow(rowData);
+        Total(); 
+      }
+      if(CheckP3){
+        String rowData[]=new String[4];
+        rowData[0]= "Hawaiana [Grande]";
+        rowData[1]= "10000";
+        rowData[2]= P3G;
+        rowData[3]= ImpP3G;
+        model.addRow(rowData);
+        Total(); 
+      }
+       if(CheckP4){
+        String rowData[]=new String[4];
+        rowData[0]= "Vegetariana [Pequeña]";
+        rowData[1]= "7500";
+        rowData[2]= P4P;
+        rowData[3]= ImpP4P;
+        model.addRow(rowData);
+        Total(); 
+      }
+       if(CheckP4){
+        String rowData[]=new String[4];
+        rowData[0]= "Vegetariana [Mediana]";
+        rowData[1]= "9000";
+        rowData[2]= P4M;
+        rowData[3]= ImpP4M;
+        model.addRow(rowData);
+        Total(); 
+      }
+      if(CheckP4){
+        String rowData[]=new String[4];
+        rowData[0]= "Vegetariana [Grande]";
+        rowData[1]= "10000";
+        rowData[2]= P4G;
+        rowData[3]= ImpP4G;
+        model.addRow(rowData);
+        Total(); 
+      }
     // Facturacion de Bebidas
       
      if (CheckR1){
@@ -402,17 +540,19 @@ DefaultTableModel model=new DefaultTableModel();
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtNombreFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(txtNombreFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel8)))
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtOrdenFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(txtOrdenFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel10)))
                 .addGap(38, 38, 38)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
@@ -527,10 +667,34 @@ DefaultTableModel model=new DefaultTableModel();
     String R6;
     String R7;
     String R8;
+    String P1P;
+    String P1M;
+    String P1G; 
+    String P2P;
+    String P2M;
+    String P2G; 
+    String P3P;
+    String P3M;
+    String P3G; 
+    String P4P;
+    String P4M;
+    String P4G;
     String ImpB1;
     String ImpB2;
     String ImpB3;
     String ImpB4;
+    String ImpP1P;
+    String ImpP1M;
+    String ImpP1G;
+    String ImpP2P;
+    String ImpP2M;
+    String ImpP2G;
+    String ImpP3P;
+    String ImpP3M;
+    String ImpP3G;
+    String ImpP4P;
+    String ImpP4M;
+    String ImpP4G;
     String ImpR1;
     String ImpR2;
     String ImpR3;
@@ -543,6 +707,10 @@ DefaultTableModel model=new DefaultTableModel();
     Boolean CheckB2;
     Boolean CheckB3;
     Boolean CheckB4;
+    Boolean CheckP1;
+    Boolean CheckP2;
+    Boolean CheckP3;
+    Boolean CheckP4;
     Boolean CheckR1;
     Boolean CheckR2;
     Boolean CheckR3;

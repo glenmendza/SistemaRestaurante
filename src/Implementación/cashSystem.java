@@ -428,15 +428,12 @@ public class cashSystem extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addComponent(LabelCantidadBurger3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4))
+                        .addComponent(SpinnerBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelBurgersLayout.createSequentialGroup()
                         .addComponent(CBBurger3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelBurgersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelBurgersLayout.createSequentialGroup()
-                                .addComponent(LabelNameBurger3)
-                                .addGap(10, 10, 10))
+                            .addComponent(LabelNameBurger3)
                             .addComponent(FotoBurger3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(CBBurger4)
@@ -846,10 +843,11 @@ public class cashSystem extends javax.swing.JFrame {
                                     .addComponent(SlabelPizza1)
                                     .addComponent(Spinner1Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Spinner2Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(MlabelPizza1)
-                                    .addComponent(CBPizza2))
+                                .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CBPizza2)
+                                    .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(Spinner2Pizza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(MlabelPizza1)))
                                 .addGap(12, 12, 12)
                                 .addGroup(jPanelPizzasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(LlabelPizza1)
@@ -2134,8 +2132,8 @@ public class cashSystem extends javax.swing.JFrame {
     
     private void btnFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFacturaActionPerformed
        
-        String Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,ImpB1,ImpB2,ImpB3,ImpB4,ImpR1,ImpR2,ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8;
-        Boolean CheckB1, CheckB2, CheckB3, CheckB4, CheckR1, CheckR2, CheckR3, CheckR4, CheckR1G, CheckR2G, CheckR3G, CheckR4G;
+        String Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,P1P,P1M,P1G,P2P,P2M,P2G,P3P,P3M,P3G,P4P,P4M,P4G,ImpB1,ImpB2,ImpB3,ImpB4,ImpP1P,ImpP1M,ImpP1G,ImpP2P,ImpP2M,ImpP2G,ImpP3P,ImpP3M,ImpP3G,ImpP4P,ImpP4M,ImpP4G,ImpR1,ImpR2,ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8;
+        Boolean CheckB1,CheckB2,CheckB3,CheckB4,CheckP1,CheckP2,CheckP3,CheckP4,CheckR1,CheckR2,CheckR3,CheckR4,CheckR1G,CheckR2G,CheckR3G,CheckR4G;
          
         Nombre = txtNombreCliente.getText();
         Orden = txtNumeroOrden.getText();
@@ -2154,6 +2152,21 @@ public class cashSystem extends javax.swing.JFrame {
         R7 = SpinnerSpriteGrande.getValue().toString();
         R8 = SpinnerTeFrioGrande.getValue().toString();
         
+        
+        P1P = Spinner1Pizza1.getValue().toString();
+        P1M = Spinner2Pizza1.getValue().toString();
+        P1G = Spinner3Pizza1.getValue().toString();
+        P2P = Spinner1Pizza2.getValue().toString();
+        P2M = Spinner2Pizza2.getValue().toString();
+        P2G = Spinner3Pizza2.getValue().toString();
+        P3P = Spinner1Pizza3.getValue().toString();
+        P3M = Spinner2Pizza3.getValue().toString();
+        P3G = Spinner3Pizza3.getValue().toString();
+        P4P = Spinner1Pizza4.getValue().toString();
+        P4M = Spinner2Pizza4.getValue().toString();
+        P4G = Spinner3Pizza4.getValue().toString();
+         
+        
        ImpR1 = Double.toString(sumDrinks[0]);
        ImpR2 = Double.toString(sumDrinks[1]);
        ImpR3 = Double.toString(sumDrinks[2]);
@@ -2164,28 +2177,54 @@ public class cashSystem extends javax.swing.JFrame {
        ImpR8 = Double.toString(sumDrinks[7]);
         
         
-        ImpB1 = Double.toString(subSum1);
-        ImpB2 = Double.toString(subSum2);
-        ImpB3 = Double.toString(subSum3);
-        ImpB4 = Double.toString(subSum4);
+       ImpB1 = Double.toString(subSum1);
+       ImpB2 = Double.toString(subSum2);
+       ImpB3 = Double.toString(subSum3);
+       ImpB4 = Double.toString(subSum4);
         
-        CheckB1 = CBBurger1.isSelected();
-        CheckB2 = CBBurger2.isSelected();
-        CheckB3 = CBBurger3.isSelected();
-        CheckB4 = CBBurger4.isSelected();
+       ImpP1P = Double.toString(sumPizza[0]);
+       ImpP1M = Double.toString(sumPizza[1]);
+       ImpP1G = Double.toString(sumPizza[2]); 
+       ImpP2P = Double.toString(sumPizza[3]);
+       ImpP2M = Double.toString(sumPizza[4]);
+       ImpP2G = Double.toString(sumPizza[5]);  
+       ImpP3P = Double.toString(sumPizza[6]);
+       ImpP3M = Double.toString(sumPizza[7]);
+       ImpP3G = Double.toString(sumPizza[8]);  
+       ImpP4P = Double.toString(sumPizza[9]);
+       ImpP4M = Double.toString(sumPizza[10]);
+       ImpP4G = Double.toString(sumPizza[11]); 
+       
+       
+       
+       
+       CheckB1 = CBBurger1.isSelected();
+       CheckB2 = CBBurger2.isSelected();
+       CheckB3 = CBBurger3.isSelected();
+       CheckB4 = CBBurger4.isSelected();
+        
+       CheckP1 = CBPizza1.isSelected();
+       CheckP2 = CBPizza2.isSelected();
+       CheckP3 = CBPizza3.isSelected();
+       CheckP4 = CBPizza4.isSelected();
         
         
-        CheckR1 = CBCocaColaRegular.isSelected();
-        CheckR2 = CBPepsiRegular.isSelected();
-        CheckR3 = CBSpriteRegular.isSelected();
-        CheckR4 = CBTeFrioRegular.isSelected();
-        CheckR1G = CBCocaColaGrande.isSelected();
-        CheckR2G = CBPepsiGrande.isSelected();
-        CheckR3G = CBSpriteGrande.isSelected();
-        CheckR4G = CBTeFrioGrande.isSelected();
         
-       new facturaSystem(Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,ImpB1,ImpB2,ImpB3,ImpB4,ImpR1,ImpR2,ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8,CheckB1,CheckB2,CheckB3,CheckB4,
-               CheckR1,CheckR2,CheckR3,CheckR4,CheckR1G,CheckR2G,CheckR3G,CheckR4G).setVisible(true);
+        
+        
+        
+        
+       CheckR1 = CBCocaColaRegular.isSelected();
+       CheckR2 = CBPepsiRegular.isSelected();
+       CheckR3 = CBSpriteRegular.isSelected();
+       CheckR4 = CBTeFrioRegular.isSelected();
+       CheckR1G = CBCocaColaGrande.isSelected();
+       CheckR2G = CBPepsiGrande.isSelected();
+       CheckR3G = CBSpriteGrande.isSelected();
+       CheckR4G = CBTeFrioGrande.isSelected();
+        
+       new facturaSystem(Nombre,Orden,B1,B2,B3,B4,R1,R2,R3,R4,R5,R6,R7,R8,P1P,P1M,P1G,P2P,P2M,P2G,P3P,P3M,P3G,P4P,P4M,P4G,ImpB1,ImpB2,ImpB3,ImpB4,ImpP1P,ImpP1M,ImpP1G,ImpP2P,ImpP2M,ImpP2G,ImpP3P,ImpP3M,ImpP3G,ImpP4P,ImpP4M,ImpP4G,ImpR1,ImpR2,
+               ImpR3,ImpR4,ImpR5,ImpR6,ImpR7,ImpR8,CheckB1,CheckB2,CheckB3,CheckB4,CheckP1,CheckP2,CheckP3,CheckP4,CheckR1,CheckR2,CheckR3,CheckR4,CheckR1G,CheckR2G,CheckR3G,CheckR4G).setVisible(true);
     }//GEN-LAST:event_btnFacturaActionPerformed
 
     /**
