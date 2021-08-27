@@ -18,6 +18,7 @@ public class cashSystem extends javax.swing.JFrame {
     double totalPizza; // Total de Pizzas
     double totalDrinks; // Total de Bebidas
     double total; // Total (Hamburguesas, pizzas, bebidas)
+    double total2;
     double[] sumPizza = new double[12]; // Arreglo de Pizzas
     double[] sumDrinks = new double[8]; // Arreglo de Bebidas
     int pizzaQty1 = 0;
@@ -50,8 +51,8 @@ public class cashSystem extends javax.swing.JFrame {
         total = totalBurger + totalPizza + totalDrinks;
         jLabelTotalPagar2.setText("₡"+String.valueOf(total));
         double iva = total*0.13;
-        double total2=(iva+total);
-        total2=redondear(total2);
+        total2=(iva+total);
+        total2=Math.round(total2);
         jLabelTotalPagar4.setText("₡"+String.valueOf(total2));
     }
 
@@ -926,6 +927,11 @@ public class cashSystem extends javax.swing.JFrame {
         txtCantidadPagada.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         txtCantidadPagada.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtCantidadPagada.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, new java.awt.Color(204, 204, 204), java.awt.Color.white, java.awt.Color.white));
+        txtCantidadPagada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCantidadPagadaActionPerformed(evt);
+            }
+        });
 
         btnCambio.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         btnCambio.setText("Cambio");
@@ -1833,13 +1839,13 @@ public class cashSystem extends javax.swing.JFrame {
         try{
         String amount = txtCantidadPagada.getText();
         double paidAmount = Double.parseDouble(amount);
-        if(paidAmount < total)
+        if(paidAmount < total2)
         {
             jLabelNota.setText("Nota: ¡La cantidad pagada no puede ser inferior al TOTAL PAGABLE!!");
         }
         else
         {
-            jLabelCambio2.setText("₡"+String.valueOf(paidAmount - total));
+            jLabelCambio2.setText("₡"+String.valueOf(paidAmount - total2));
             jLabelNota.setText("");
         }
         }catch (Exception e)
@@ -2261,6 +2267,10 @@ public class cashSystem extends javax.swing.JFrame {
         this.setVisible(false);
         new loginSystem().setVisible(true);
     }//GEN-LAST:event_btnFactura1ActionPerformed
+
+    private void txtCantidadPagadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadPagadaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCantidadPagadaActionPerformed
 
     /**
      * @param args the command line arguments
