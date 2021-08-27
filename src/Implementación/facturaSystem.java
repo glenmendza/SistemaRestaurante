@@ -1,7 +1,12 @@
 
 package Implementación;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import javax.swing.JFileChooser;
 import java.time.LocalDateTime;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -395,6 +400,9 @@ DefaultTableModel model=new DefaultTableModel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        miSave = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -574,27 +582,93 @@ DefaultTableModel model=new DefaultTableModel();
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jMenu1.setText("File");
+
+        miSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        miSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/save.png"))); // NOI18N
+        miSave.setText("Guardar Factura");
+        miSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miSaveActionPerformed(evt);
+            }
+        });
+        jMenu1.add(miSave);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(161, 161, 161)
+                .addGap(135, 135, 135)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void miSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miSaveActionPerformed
+        // TODO add your handling code here:
+        
+        String documento;
+        String mensaje;
+
+        if(seleccionar.showDialog(null,"Save")==JFileChooser.APPROVE_OPTION)
+        {
+            archivo=seleccionar.getSelectedFile();
+            if (archivo.getName().endsWith("txt"))
+            {
+                documento=jScrollPane2.getName();
+                //documento=jTextArea1.getText();
+                mensaje=GuardarArchivo(archivo, documento);
+                if (mensaje!=null)
+                {
+                    JOptionPane.showMessageDialog(null, mensaje);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Unsupported file",
+                        "ERROR",JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            else
+            JOptionPane.showMessageDialog(null, "Save text document");
+        }
+        
+    }//GEN-LAST:event_miSaveActionPerformed
+
+        public String GuardarArchivo(File arch,String doc)
+    {
+        String mensaje=null;
+        byte[] bytxt;
+        try
+        {
+            salida = new FileOutputStream(arch);
+            bytxt=doc.getBytes();
+            salida.write(bytxt);
+            mensaje="File Saved Successfully";
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null,"Error",
+                                            e.getMessage(),
+                                            JOptionPane.ERROR_MESSAGE);
+        }
+        return mensaje;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -643,12 +717,15 @@ DefaultTableModel model=new DefaultTableModel();
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel labelIva;
     private javax.swing.JLabel labelSubTotal;
     private javax.swing.JLabel labelTotal;
+    private javax.swing.JMenuItem miSave;
     private javax.swing.JTable tablaFactura;
     private javax.swing.JTextField txtNombreFactura;
     private javax.swing.JTextField txtOrdenFactura;
@@ -720,4 +797,9 @@ DefaultTableModel model=new DefaultTableModel();
     Boolean CheckR3G;
     Boolean CheckR4G;
     
+// Declaraciones globales para guardar archivo    
+JFileChooser seleccionar = new JFileChooser();
+File archivo;
+FileInputStream entrada;
+FileOutputStream salida;
 }

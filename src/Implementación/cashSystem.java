@@ -173,7 +173,7 @@ public class cashSystem extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pipe's Burguesas");
 
-        jPanelInformation.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Información", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 14), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanelInformation.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 14), new java.awt.Color(153, 153, 153))); // NOI18N
         jPanelInformation.setForeground(new java.awt.Color(255, 255, 255));
 
         txtNumeroOrden.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
@@ -897,7 +897,7 @@ public class cashSystem extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Pizzas", jPanelPizzas);
 
-        jPanelPago.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanelPago.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabelTotalPagar2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabelTotalPagar2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -913,7 +913,7 @@ public class cashSystem extends javax.swing.JFrame {
         jLabelCambio2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelCambio2.setText("₡0.0");
 
-        jPanelCambio.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanelCambio.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabelCantidadPagada.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabelCantidadPagada.setText("Cantidad pagada");
@@ -953,7 +953,7 @@ public class cashSystem extends javax.swing.JFrame {
         jPanelCambioLayout.setVerticalGroup(
             jPanelCambioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCambioLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(34, Short.MAX_VALUE)
                 .addComponent(jLabelNota, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCambioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1263,6 +1263,7 @@ public class cashSystem extends javax.swing.JFrame {
         );
 
         jLabelPagos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Pagos.png"))); // NOI18N
+        jLabelPagos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         btnFactura.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         btnFactura.setText("Generar factura");
@@ -1288,11 +1289,11 @@ public class cashSystem extends javax.swing.JFrame {
                         .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(16, 16, 16))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(51, 51, 51))))
+                        .addGap(51, 51, 51))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1301,9 +1302,9 @@ public class cashSystem extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanelBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabelPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(81, 81, 81)
                         .addComponent(btnFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
@@ -1315,7 +1316,7 @@ public class cashSystem extends javax.swing.JFrame {
                         .addGap(32, 32, 32))))
         );
 
-        jPanelInformation.getAccessibleContext().setAccessibleName("Informacion de cliente");
+        jPanelInformation.getAccessibleContext().setAccessibleName("");
 
         pack();
         setLocationRelativeTo(null);
